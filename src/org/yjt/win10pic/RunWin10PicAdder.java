@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * 提取Win10的Windows聚焦的横向壁纸，添加到用户图片文件夹
+ * Add horizontal wall papers of Windows Foucus to user's picture folder.
  * 
  * @author yjt
  */
@@ -48,7 +48,7 @@ public class RunWin10PicAdder {
 	}
 
 	/**
-	 * 寻找图片文件的下一个编号
+	 * find next number name of jpg
 	 * 
 	 * @param fs
 	 * @return
@@ -68,7 +68,7 @@ public class RunWin10PicAdder {
 	}
 
 	/**
-	 * 按照MD5添加文件
+	 * add new pictures identified by MD5
 	 * 
 	 * @param oldpics
 	 * @param newpics
