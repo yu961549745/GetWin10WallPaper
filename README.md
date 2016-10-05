@@ -1,6 +1,7 @@
 # GetWin10WallPaper
 Add horizontal wall papers of Windows Foucus to user's picture folder.
 + `src` is source code  of Java.
++ `java/AddWin10Pic.jar` is the runnable file of Java.
 + `matlab` is source code of Matlab.
 
 ## Usage
