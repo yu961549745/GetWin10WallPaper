@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Add horizontal wall papers of Windows Foucus to user's picture folder.
+ * Add horizontal wall papers of Windows Focus to user's picture folder.
  * 
  * @author yjt
  */
