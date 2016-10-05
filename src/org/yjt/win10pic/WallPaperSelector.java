@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 选择横向壁纸
+ * Get horizontal wall papers
  * 
  * @author yjt
  */

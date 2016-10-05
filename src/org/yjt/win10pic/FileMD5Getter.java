@@ -8,7 +8,7 @@ import java.security.DigestInputStream;
 import java.security.MessageDigest;
 
 /**
- * 获取文件的MD5
+ * Get MD5 of File
  * 
  * @author yjt
  */

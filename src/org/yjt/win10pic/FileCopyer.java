@@ -5,8 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+
 /**
- * 利用文件通道复制文件 
+ * Copy File use Channel
+ * 
  * @author yjt
  */
 public class FileCopyer {
@@ -18,9 +20,9 @@ public class FileCopyer {
 		try {
 			fi = new FileInputStream(s);
 			fo = new FileOutputStream(t);
-			in = fi.getChannel();// 得到对应的文件通道
-			out = fo.getChannel();// 得到对应的文件通道
-			in.transferTo(0, in.size(), out);// 连接两个通道，并且从in通道读取，然后写入out通道
+			in = fi.getChannel();
+			out = fo.getChannel();
+			in.transferTo(0, in.size(), out);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
