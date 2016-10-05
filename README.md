@@ -3,9 +3,27 @@ Add horizontal wall papers of Windows Foucus to user's picture folder.
 + `src` is source code  of Java.
 + `matlab` is source code of Matlab.
 
-Win10锁屏界面的壁纸真好看，但是人工提取比较麻烦，于是就写个程序来做。
+## Usage
 
-本来是实现了一个Matlab的，但是呢，启动Maltab本身太慢了。也不是不能写C++，但是C++列举文件夹中的文件太麻烦了，还是写Java吧。
+### Java
+This is an Eclipse project, can import into Eclipse directly.
+
+### Maltab
+Just run `getWin10Pic.m`.
+
+The `*.mexw64` files is for 64-bit Matlab. For 32-bit Matlab, you should [setup mex complie enviroment](https://www.mathworks.com/help/matlab/ref/mex.html) first, and run following code in Matlab Command Window
+```
+mex mexIsJpg.cpp
+mex mexGetJpgSize.cpp
+mex mMD5.cpp
+```
+For 64-bit Maltab that earlier than R2016a, if there is any problem, you  can try above method first.
+
+## 说明
+Win10锁屏界面的壁纸真好看，但是人工提取比较麻烦，于是就写个程序来做。
++ 本来是实现了一个Matlab的，但是呢，启动Maltab本身太慢了。
++ 也不是不能写C++，但是C++列举文件夹中的文件太麻烦了，不同平台操作还不一样，正则表达式是的实现也不是特别好。
++ 还是写Java吧。
 
 主要包含以下步骤：
 + 从`%USERPROFILE%/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets`读取横向壁纸，该文件夹下文件没有后缀名，而且并不是所有文件都是jpg格式的，需要进行识别：
