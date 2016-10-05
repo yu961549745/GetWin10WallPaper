@@ -24,7 +24,7 @@ public class FileMD5Getter {
 		return byte2hex(md5.digest());
 	}
 
-	public static String byte2hex(byte[] bs) {
+	private static String byte2hex(byte[] bs) {
 		StringWriter sw = new StringWriter(bs.length * 2);
 		PrintWriter w = new PrintWriter(sw);
 		for (byte b : bs) {
