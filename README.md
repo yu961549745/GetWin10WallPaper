@@ -1,10 +1,12 @@
 # GetWin10WallPaper
-Add horizontal wall papers of Windows Foucus to user's picture folder.
+Add horizontal wall papers from Win 10 lock screen to user's picture folder.
++ pick horizontal wall papers from the folder of Win 10 lock screen wall papers. People can't see the pictures directly, because files of this folder doesn't have extension names. It's tired for people to rename files one by one and select the valid files.
++ add new pictures to user's picture folder that different from the exist pictures. It's tired for people to check if the new picture is already exist.
+
+## Usage
 + `src` is source code  of Java.
 + `java/AddWin10Pic.jar` is the runnable file of Java.
 + `matlab` is source code of Matlab.
-
-## Usage
 
 ### Java
 This is an Eclipse project, can import into Eclipse directly.
