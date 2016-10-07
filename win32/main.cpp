@@ -115,6 +115,16 @@ int main(){
 	printf("find     %3d pics\n", pic);
 	printf("add      %3d pics\n", add);
 	printf("start at %03d.jpg\n", pid - add + 1);
+	// open dst folder
+	string cmd = "explorer \"";
+	cmd.append(dstDir).append("\"");
+	char cmds[256];
+	strcpy(cmds, cmd.c_str());
+	for (int k = 0; cmds[k] != '\0'; k++){
+		if (cmds[k] == '/') cmds[k] = '\\';
+	}
+	system(cmds);
+
 	system("pause");
 }
 
