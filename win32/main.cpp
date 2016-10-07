@@ -89,18 +89,20 @@ int main(){
 	int pid = 0;
 	for (int k = 0; k < olds.size(); k++){
 		md5s.insert(getMD5(olds[k]));
+		// find the next numbered name of new pictures 
 		if (regex_search(olds[k], sm, r)){
 			int id = stoi(sm.str());
 			if (id>pid) pid = id;
 		}
 	}
+
 	int add = 0;
 	int pic = 0;
-	
 	for (int k = 0; k < fps.size(); k++){
 		if (isWallPaper(fps[k])){
 			pic++;
 			string md5 = getMD5(fps[k]);
+			// add new pictures identified by MD5 
 			if (!md5s.count(md5)){
 				add++;
 				md5s.insert(md5);
