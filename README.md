@@ -7,6 +7,12 @@ Add horizontal wall papers from Win 10 lock screen to user's picture folder.
 + `src` is source code  of Java.
 + `java/AddWin10Pic.jar` is the runnable file of Java.
 + `matlab` is source code of Matlab.
++ `win32` contains C++ source code and executable file `AddWin10Pic.exe`.
+
+### C++
+Just run `AddWin10Pic.exe`.
+
+The source code `main.cpp` can complie with `Visual Studio 2013`.
 
 ### Java
 This is an Eclipse project, can import into Eclipse directly.
@@ -25,8 +31,8 @@ For 64-bit Maltab that earlier than R2016a, if there is any problem, you  can tr
 ## 说明
 Win10锁屏界面的壁纸真好看，但是人工提取比较麻烦，于是就写个程序来做。
 + 本来是实现了一个Matlab的，但是呢，启动Maltab本身太慢了。
-+ 也不是不能写C++，但是C++列举文件夹中的文件太麻烦了，正则表达式是的实现也不是特别好。
-+ 还是写Java吧。
++ 然后写了个Java吧。
++ 方便大家不用安装Java环境，就干脆写个C++吧。
 
 主要包含以下步骤：
 + 从`%USERPROFILE%/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets`读取横向壁纸，该文件夹下文件没有后缀名，而且并不是所有文件都是jpg格式的，需要进行识别：
