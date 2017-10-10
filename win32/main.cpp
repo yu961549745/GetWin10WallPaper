@@ -74,11 +74,10 @@ void copy_file(string src, string dst){
 
 int main(){
 	string picDir, dstDir;
-	char* userFolder = getenv("USERPROFILE");
-	picDir = userFolder;
-	dstDir = userFolder;
+	picDir = getenv("USERPROFILE");
 	picDir.append("/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets");
-	dstDir.append("/Pictures/Saved Pictures");
+	dstDir = "./Saved Pictures";
+	
 	
 	vector<string> fps = getFiles(picDir);
 	vector<string> olds = getFiles(dstDir);
