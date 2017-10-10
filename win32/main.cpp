@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<direct.h>
@@ -8,6 +7,7 @@
 #include<iostream>
 #include<set>
 #include<regex>
+#include<Shlobj.h>
 using namespace std;
 
 // get file's MD5
@@ -72,12 +72,25 @@ void copy_file(string src, string dst){
 	fclose(out);
 }
 
+string getMyPictureDir() {
+	TCHAR ws[MAX_PATH];
+	SHGetFolderPath(NULL,
+		CSIDL_MYPICTURES,
+		NULL,
+		0,
+		ws);
+	char s[2 * MAX_PATH];
+
+	wcstombs(s, ws, MAX_PATH);
+	puts(s);
+	return string(s);
+}
+
 int main(){
 	string picDir, dstDir;
 	picDir = getenv("USERPROFILE");
 	picDir.append("/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets");
-	dstDir = "./Saved Pictures";
-	
+	dstDir = getMyPictureDir().append("/Saved Pictures");
 	
 	vector<string> fps = getFiles(picDir);
 	vector<string> olds = getFiles(dstDir);
